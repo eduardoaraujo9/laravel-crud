@@ -1,0 +1,21 @@
+composer create-project --prefer-dist laravel/laravel laravel
+
+???laravel 5 ide helper generator
+
+
+php artisan make:auth
+php artisan make:migrate create_clientes_table --create=client
+
+php artisan migrate
+php artisan migrate:refresh
+
+composer require "laravelcollective/html":"^5.3.0"
+
+>> providers >> Collective\Html\HtmlServiceProvider::class,
+>> aliases >>       'Form' => Collective\Html\FormFacade::class,
+>> aliases >>       'Html' => Collective\Html\HtmlFacade::class,
+
+
+
+Form binding: {!! Form::model($cliente, ['method' => 'PATCH', 'url' => url('clientes/' . $cliente->id)]) !!}
+isset($cliente->id)
