@@ -17,5 +17,5 @@ composer require "laravelcollective/html":"^5.3.0"
 
 
 
-Form binding: {!! Form::model($cliente, ['method' => 'PATCH', 'url' => url('clientes/' . $cliente->id)]) !!}
+Form binding: {!! Form::model($cliente, ['method' => 'PATCH', 'url' => url('clientes/' . $cliente->id), 'style'=>'display:inline']) !!}
 isset($cliente->id)
