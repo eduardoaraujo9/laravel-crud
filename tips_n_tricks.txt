@@ -16,6 +16,6 @@ composer require "laravelcollective/html":"^5.3.0"
 >> aliases >>       'Html' => Collective\Html\HtmlFacade::class,
 
 
-
+Form: {!! Form::open(['url' => url('/clientes'), 'method' => 'POST', 'class' => 'pull-right']) !!}
 Form binding: {!! Form::model($cliente, ['method' => 'PATCH', 'url' => url('clientes/' . $cliente->id), 'style'=>'display:inline']) !!}
 isset($cliente->id)
