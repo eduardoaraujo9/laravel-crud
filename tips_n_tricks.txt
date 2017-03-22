@@ -19,3 +19,8 @@ composer require "laravelcollective/html":"^5.3.0"
 Form: {!! Form::open(['url' => url('/clientes'), 'method' => 'POST', 'class' => 'pull-right']) !!}
 Form binding: {!! Form::model($cliente, ['method' => 'PATCH', 'url' => url('clientes/' . $cliente->id), 'style'=>'display:inline']) !!}
 isset($cliente->id)
+
+
+\Session::flash('mensagem','Cliente cadastrado com sucesso!');
+                        @if(Session::has('mensagem'))
+                            <div class="alert alert-success alert-dismissible">{{ Session::get('mensagem') }}</div>
